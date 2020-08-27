@@ -42,6 +42,7 @@ module Cardano.CLI.Shelley.Commands
   , PoolMetaDataFile (..)
   , PrivKeyFile (..)
   , BlockId (..)
+  , ColdVerificationKeyOrFile (..)
   ) where
 
 import           Data.Text (Text)
@@ -198,9 +199,9 @@ data NodeCmd
   = NodeKeyGenCold VerificationKeyFile SigningKeyFile OpCertCounterFile
   | NodeKeyGenKES  VerificationKeyFile SigningKeyFile
   | NodeKeyGenVRF  VerificationKeyFile SigningKeyFile
-  | NodeKeyHashVRF  VerificationKeyFile (Maybe OutputFile)
-  | NodeNewCounter  VerificationKeyFile Word OpCertCounterFile
-  | NodeIssueOpCert VerificationKeyFile SigningKeyFile OpCertCounterFile
+  | NodeKeyHashVRF  (VerificationKeyOrFile VrfKey) (Maybe OutputFile)
+  | NodeNewCounter ColdVerificationKeyOrFile Word OpCertCounterFile
+  | NodeIssueOpCert (VerificationKeyOrFile KesKey) SigningKeyFile OpCertCounterFile
                     KESPeriod OutputFile
   deriving (Eq, Show)
 
@@ -434,4 +435,17 @@ newtype TxFile
 -- | A raw verification key given in Base64, and decoded into a ByteString.
 newtype VerificationKeyBase64
   = VerificationKeyBase64 String
+  deriving (Eq, Show)
+
+-- | Either a stake pool verification key, genesis delegate verification key,
+-- or a path to a cold verification key file.
+--
+-- Note that a "cold verification key" refers to either a stake pool or
+-- genesis delegate verification key.
+--
+-- TODO: A genesis delegate extended key should also be valid here.
+data ColdVerificationKeyOrFile
+  = ColdStakePoolVerificationKey !(VerificationKey StakePoolKey)
+  | ColdGenesisDelegateVerificationKey !(VerificationKey GenesisDelegateKey)
+  | ColdVerificationKeyFile !VerificationKeyFile
   deriving (Eq, Show)
