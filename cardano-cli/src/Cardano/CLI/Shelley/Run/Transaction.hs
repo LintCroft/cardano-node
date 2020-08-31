@@ -35,7 +35,7 @@ import           Ouroboros.Consensus.Shelley.Ledger (ShelleyBlock)
 import           Ouroboros.Consensus.Shelley.Protocol.Crypto (StandardShelley)
 
 import           Cardano.CLI.Environment (EnvSocketError, readEnvSocketPath, renderEnvSocketError)
-import           Cardano.CLI.Shelley.Key (SigningKeyDecodeError (..), readSigningKeyFileAnyOf)
+import           Cardano.CLI.Shelley.Key (KeyDecodeError, readSigningKeyFileAnyOf)
 import           Cardano.CLI.Shelley.Parsers
 import           Cardano.CLI.Types
 
@@ -48,7 +48,7 @@ data ShelleyTxCmdError
   = ShelleyTxCmdAesonDecodeProtocolParamsError !FilePath !Text
   | ShelleyTxCmdReadFileError !(FileError ())
   | ShelleyTxCmdReadTextViewFileError !(FileError TextEnvelopeError)
-  | ShelleyTxCmdReadSigningKeyFileError !(FileError SigningKeyDecodeError)
+  | ShelleyTxCmdReadKeyFileError !(FileError KeyDecodeError)
   | ShelleyTxCmdWriteFileError !(FileError ())
   | ShelleyTxCmdMetaDataJsonParseError !FilePath !String
   | ShelleyTxCmdMetaDataConversionError !FilePath !TxMetadataJsonError
@@ -66,7 +66,7 @@ renderShelleyTxCmdError err =
   case err of
     ShelleyTxCmdReadFileError fileErr -> Text.pack (displayError fileErr)
     ShelleyTxCmdReadTextViewFileError fileErr -> Text.pack (displayError fileErr)
-    ShelleyTxCmdReadSigningKeyFileError fileErr -> Text.pack (displayError fileErr)
+    ShelleyTxCmdReadKeyFileError fileErr -> Text.pack (displayError fileErr)
     ShelleyTxCmdWriteFileError fileErr -> Text.pack (displayError fileErr)
     ShelleyTxCmdMetaDataJsonParseError fp jsonErr ->
        "Invalid JSON format in file: " <> show fp
@@ -178,7 +178,7 @@ runTxSign :: TxBodyFile
 runTxSign (TxBodyFile txbodyFile) skFiles mnw (TxFile txFile) = do
     txbody <- firstExceptT ShelleyTxCmdReadTextViewFileError . newExceptT $
                 Api.readFileTextEnvelope Api.AsShelleyTxBody txbodyFile
-    sks    <- firstExceptT ShelleyTxCmdReadSigningKeyFileError $
+    sks    <- firstExceptT ShelleyTxCmdReadKeyFileError $
                 mapM readSigningKeyFile skFiles
 
     -- We have to handle Byron and Shelley key witnesses slightly differently
@@ -308,10 +308,10 @@ data SomeWitnessSigningKey
 
 readSigningKeyFile
   :: SigningKeyFile
-  -> ExceptT (Api.FileError SigningKeyDecodeError) IO SomeWitnessSigningKey
+  -> ExceptT (Api.FileError KeyDecodeError) IO SomeWitnessSigningKey
 readSigningKeyFile skFile =
     newExceptT $
-      readSigningKeyFileAnyOf textEnvFileTypes bech32FileTypes skFile
+      readSigningKeyFileAnyOf bech32FileTypes textEnvFileTypes skFile
   where
     textEnvFileTypes =
       [ Api.FromSomeType (Api.AsSigningKey Api.AsByronKey)
@@ -386,7 +386,7 @@ runTxWitness
 runTxWitness (TxBodyFile txbodyFile) witSignKeyFile mbNw (OutputFile oFile) = do
   txbody <- firstExceptT ShelleyTxCmdReadTextViewFileError . newExceptT $
               Api.readFileTextEnvelope Api.AsShelleyTxBody txbodyFile
-  someWitSignKey <- firstExceptT ShelleyTxCmdReadSigningKeyFileError $
+  someWitSignKey <- firstExceptT ShelleyTxCmdReadKeyFileError $
               readSigningKeyFile witSignKeyFile
 
   witness <-
