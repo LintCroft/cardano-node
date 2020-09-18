@@ -20,7 +20,6 @@ import qualified Data.ByteString.Lazy.Char8 as C8
 import qualified Data.List.NonEmpty as NE
 import qualified Data.Text as Text
 
-import           Control.Monad.Trans.Except (ExceptT)
 import           Control.Monad.Trans.Except.Extra (firstExceptT, handleIOExceptT, hoistEither, left,
                      newExceptT, right)
 

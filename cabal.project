@@ -82,35 +82,35 @@ package small-steps-test
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 2d680f2f89867119a484a728c61a556a4fc8fdca
+  tag: 775a59faddccc1f26e82662088d4ecc52d0ee044
   --sha256: 0sl7adyrjf3w6025gvljxyr222s53avin0sv0gzhdypmj9wg5ml6
   subdir: binary
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 2d680f2f89867119a484a728c61a556a4fc8fdca
+  tag: 775a59faddccc1f26e82662088d4ecc52d0ee044
   --sha256: 0sl7adyrjf3w6025gvljxyr222s53avin0sv0gzhdypmj9wg5ml6
   subdir: binary/test
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 2d680f2f89867119a484a728c61a556a4fc8fdca
+  tag: 775a59faddccc1f26e82662088d4ecc52d0ee044
   --sha256: 0sl7adyrjf3w6025gvljxyr222s53avin0sv0gzhdypmj9wg5ml6
   subdir: cardano-crypto-class
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 2d680f2f89867119a484a728c61a556a4fc8fdca
+  tag: 775a59faddccc1f26e82662088d4ecc52d0ee044
   --sha256: 0sl7adyrjf3w6025gvljxyr222s53avin0sv0gzhdypmj9wg5ml6
   subdir: slotting
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 2d680f2f89867119a484a728c61a556a4fc8fdca
+  tag: 775a59faddccc1f26e82662088d4ecc52d0ee044
   --sha256: 0sl7adyrjf3w6025gvljxyr222s53avin0sv0gzhdypmj9wg5ml6
   subdir: cardano-crypto-praos
 
@@ -219,140 +219,140 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir: iohk-monitoring
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   contra-tracer
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   plugins/scribe-systemd
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   plugins/backend-aggregation
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   plugins/backend-ekg
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   plugins/backend-monitoring
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   plugins/backend-trace-forwarder
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/iohk-monitoring-framework
-  tag: 743f266cfe5fff11d18602faf510f22a544ea295
+  tag: 0dfe11ed855ec6d69633baa2140a504eb0eff896
   --sha256: 0q1d642xqy4mlr7szc5w8mwfs5pb4wdlgw1l6qkq0yyrjk1b9pxd
   subdir:   tracer-transformers
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-network
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: io-sim
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-consensus
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-consensus-byron
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-consensus-shelley
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-consensus-cardano
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: typed-protocols
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: typed-protocols-examples
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: ouroboros-network-framework
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: network-mux
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: io-sim-classes
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 0b4bfe0d35488e5bf0ae8f78e4fd6ca760fe9fbf
+  tag: e56829974ae2912594266086e2ae788eaa7b82f8
   --sha256: 181ay17dp6lin1lwxslpzm5ynb080ai0ab9b42kwkcjpw1ym7750
   subdir: Win32-network
 
