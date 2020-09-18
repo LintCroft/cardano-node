@@ -21,13 +21,13 @@ module Cardano.Api.MetaData
 
 import           Prelude
 
-import           Data.Maybe (fromMaybe)
 import           Data.Bifunctor (first)
 import           Data.ByteString (ByteString)
-import qualified Data.ByteString       as BS
+import qualified Data.ByteString as BS
+import qualified Data.ByteString.Base16 as Base16
 import qualified Data.ByteString.Char8 as BSC
 import qualified Data.ByteString.Lazy.Char8 as LBS
-import qualified Data.ByteString.Base16 as Base16
+import           Data.Maybe (fromMaybe)
 import qualified Data.Scientific as Scientific
 import           Data.Text (Text)
 import qualified Data.Text as Text
@@ -35,18 +35,18 @@ import qualified Data.Text.Encoding as Text
 import qualified Data.Text.Lazy as Text.Lazy
 import           Data.Word (Word64)
 
+import qualified Data.HashMap.Strict as HashMap
 import qualified Data.List as List
 import           Data.List.NonEmpty (NonEmpty, nonEmpty)
 import qualified Data.Map.Strict as Map
-import qualified Data.HashMap.Strict as HashMap
 import qualified Data.Vector as Vector
 
 import qualified Data.Aeson as Aeson
 import qualified Data.Aeson.Text as Aeson.Text
 import qualified Data.Attoparsec.ByteString.Char8 as Atto
 
+import           Control.Applicative (Alternative (..))
 import           Control.Monad (guard)
-import           Control.Applicative (Alternative(..))
 
 import           Cardano.Api.Typed
 

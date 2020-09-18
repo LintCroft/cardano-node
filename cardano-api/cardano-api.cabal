@@ -15,13 +15,15 @@ extra-source-files:     README.md, ChangeLog.md
 library
   hs-source-dirs:       src
 
-  exposed-modules:      Cardano.Api.Protocol
+  exposed-modules:      Cardano.API
+                        Cardano.Api.Protocol
                         Cardano.Api.LocalChainSync
                         Cardano.Api.MetaData
                         Cardano.Api.Protocol.Byron
                         Cardano.Api.Protocol.Cardano
                         Cardano.Api.Protocol.Shelley
                         Cardano.Api.Protocol.Types
+                        Cardano.Api.Shelley
                         Cardano.Api.Shelley.Genesis
                         Cardano.Api.Shelley.ITN
                         Cardano.Api.TextView

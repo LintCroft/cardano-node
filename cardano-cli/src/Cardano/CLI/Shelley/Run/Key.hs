@@ -32,8 +32,8 @@ import qualified Cardano.Crypto.Wallet as Crypto
 import qualified Cardano.Crypto.Signing as Byron
 import qualified Shelley.Spec.Ledger.Keys as Shelley
 
+import           Cardano.Api.Shelley
 import           Cardano.Api.Shelley.ITN (xprvFromBytes)
-import           Cardano.Api.Typed
 
 import           Cardano.CLI.Byron.Key (CardanoEra (..))
 import qualified Cardano.CLI.Byron.Key as Byron

@@ -22,8 +22,8 @@ import           Cardano.Chain.UTxO (TxIn, TxOut)
 import qualified Cardano.Crypto.Hashing as Crypto
 import qualified Cardano.Crypto.Signing as Crypto
 
-import           Cardano.Api.Typed (NetworkId (..), toByronProtocolMagicId)
-import qualified Cardano.Api.Typed as Typed
+import           Cardano.API (NetworkId (..), toByronProtocolMagicId)
+import qualified Cardano.API as Typed
 
 import           Cardano.CLI.Byron.Commands
 import           Cardano.CLI.Byron.Delegation

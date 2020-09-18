@@ -4,7 +4,7 @@ module Test.Golden.Shelley.TextEnvelope.Keys.GenesisKeys
   ( golden_shelleyGenesisKeys
   ) where
 
-import           Cardano.Api.Typed (AsType (..), HasTextEnvelope (..))
+import           Cardano.API (AsType (..), HasTextEnvelope (..))
 import           Cardano.Prelude
 import           Hedgehog (Property)
 import           Test.OptParse
