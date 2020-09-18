@@ -15,7 +15,7 @@ import           Cardano.Prelude
 import           Control.Monad.Trans.Except.Extra (firstExceptT)
 import qualified Data.Text as Text
 
-import           Cardano.API
+import           Cardano.Api.Byron
 import           Cardano.Chain.Slotting (EpochSlots (..))
 import           Ouroboros.Consensus.Block (ConvertRawHash (..))
 import           Ouroboros.Network.Block

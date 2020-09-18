@@ -4,7 +4,7 @@ module Test.Golden.Shelley.TextEnvelope.Certificates.OperationalCertificate
   ( golden_shelleyOperationalCertificate
   ) where
 
-import           Cardano.API (AsType (..), HasTextEnvelope (..))
+import           Cardano.Api.Shelley
 import           Cardano.Prelude
 import           Hedgehog (Property)
 import           Test.OptParse

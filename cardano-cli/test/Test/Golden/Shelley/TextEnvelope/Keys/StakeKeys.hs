@@ -1,10 +1,11 @@
+{-# LANGUAGE DataKinds #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 module Test.Golden.Shelley.TextEnvelope.Keys.StakeKeys
   ( golden_shelleyStakeKeys
   ) where
 
-import           Cardano.API (AsType (..), HasTextEnvelope (..))
+import           Cardano.Api.Shelley
 import           Cardano.Prelude
 import           Hedgehog (Property)
 import           Test.OptParse

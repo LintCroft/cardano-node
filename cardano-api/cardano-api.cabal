@@ -16,6 +16,7 @@ library
   hs-source-dirs:       src
 
   exposed-modules:      Cardano.API
+                        Cardano.Api.Byron
                         Cardano.Api.Protocol
                         Cardano.Api.LocalChainSync
                         Cardano.Api.MetaData
