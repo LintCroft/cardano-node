@@ -5,7 +5,8 @@ module Test.Cardano.Api.Typed.CBOR
   ( tests
   ) where
 
-import           Cardano.Api.Typed
+import           Cardano.Api.Byron
+import           Cardano.Api.Shelley
 import           Cardano.Prelude
 import           Hedgehog (Gen, Property, discover)
 import           Test.Cardano.Api.Typed.Gen

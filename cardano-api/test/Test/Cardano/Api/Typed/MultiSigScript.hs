@@ -4,7 +4,7 @@ module Test.Cardano.Api.Typed.MultiSigScript
   ( tests
   ) where
 
-import           Cardano.Api.Typed
+import           Cardano.Api.Shelley
 
 import           Cardano.Prelude
 

@@ -17,22 +17,24 @@ library
 
   exposed-modules:      Cardano.API
                         Cardano.Api.Byron
-                        Cardano.Api.Protocol
-                        Cardano.Api.LocalChainSync
+                        Cardano.Api.Shelley
+
+
+  other-modules:        Cardano.Api.LocalChainSync
                         Cardano.Api.MetaData
+                        Cardano.Api.Protocol
                         Cardano.Api.Protocol.Byron
                         Cardano.Api.Protocol.Cardano
                         Cardano.Api.Protocol.Shelley
                         Cardano.Api.Protocol.Types
-                        Cardano.Api.Shelley
                         Cardano.Api.Shelley.Genesis
                         Cardano.Api.Shelley.ITN
                         Cardano.Api.TextView
                         Cardano.Api.TxSubmit
+                        Cardano.Api.TxSubmit.ErrorRender
+                        Cardano.Api.TxSubmit.Types
                         Cardano.Api.Typed
 
-  other-modules:        Cardano.Api.TxSubmit.ErrorRender
-                        Cardano.Api.TxSubmit.Types
 
 
   build-depends:        base >=4.12 && <5

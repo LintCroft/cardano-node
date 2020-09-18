@@ -17,7 +17,8 @@ module Test.Cardano.Api.Typed.Gen
   , genVerificationKey
   ) where
 
-import           Cardano.Api.Typed
+import           Cardano.Api.Byron
+import           Cardano.Api.Shelley
 
 import           Cardano.Prelude
 
@@ -26,7 +27,6 @@ import           Control.Monad.Fail (fail)
 import qualified Cardano.Binary as CBOR
 import qualified Cardano.Crypto.Hash as Crypto
 import qualified Cardano.Crypto.Seed as Crypto
-import           Cardano.Slotting.Slot (SlotNo (..))
 import           Ouroboros.Network.Magic (NetworkMagic (..))
 
 import           Hedgehog (Gen)

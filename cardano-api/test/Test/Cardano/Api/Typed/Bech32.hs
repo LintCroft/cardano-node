@@ -5,7 +5,7 @@ module Test.Cardano.Api.Typed.Bech32
 
 import           Cardano.Prelude
 
-import           Cardano.Api.Typed
+import           Cardano.Api.Shelley
 
 import           Hedgehog (Gen, Property, discover)
 import qualified Hedgehog as H

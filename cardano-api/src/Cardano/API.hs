@@ -2,13 +2,14 @@ module Cardano.API
   ( module Cardano.Api.Typed
   ) where
 
-import           Cardano.Api.Typed (Address, Bech32DecodeError, Byron, ByronKey, ByronMode,
-                     CardanoMode, Certificate, ChainSyncClient, EpochNo, FileError, FromCBOR,
-                     FromJSON, FromSomeType, GenesisDelegateExtendedKey, GenesisDelegateKey,
-                     GenesisExtendedKey, GenesisKey, GenesisUTxOKey, HasTextEnvelope, Hash, KesKey,
-                     Key, LocalNodeClientProtocols, LocalNodeConnectInfo, LocalStateQueryClient,
-                     LocalTxSubmissionClient, Lovelace, MultiSigScript, NetworkId, NetworkMagic,
-                     NodeConsensusMode, OperationalCertIssueError, OperationalCertificate,
+import           Cardano.Api.Typed (Address, AsType (AsHash), Bech32DecodeError, Byron, ByronKey,
+                     ByronMode, CardanoMode, Certificate, ChainSyncClient, Coin (..), EpochNo,
+                     FileError, FromCBOR, FromJSON, FromSomeType, GenesisDelegateExtendedKey,
+                     GenesisDelegateKey, GenesisExtendedKey, GenesisKey, GenesisUTxOKey,
+                     HasTextEnvelope, Hash, KesKey, Key, LocalNodeClientProtocols,
+                     LocalNodeConnectInfo, LocalStateQueryClient, LocalTxSubmissionClient,
+                     Lovelace, MultiSigScript, NetworkId, NetworkMagic, NodeConsensusMode,
+                     OperationalCertIssueError, OperationalCertificate,
                      OperationalCertificateIssueCounter, PaymentCredential, PaymentExtendedKey,
                      PaymentKey, PoolId, ProtocolParametersUpdate, Script, SerialiseAddress,
                      SerialiseAsBech32, SerialiseAsCBOR, SerialiseAsRawBytes, Shelley, ShelleyMode,

@@ -18,24 +18,14 @@ import qualified Data.Text as Text
 import qualified Data.Text.Encoding as Text
 import           Data.Time.Clock.POSIX (posixSecondsToUTCTime)
 
-import           Cardano.Api.Typed (MultiSigScript (..))
-import qualified Cardano.Api.Typed as Api
-import           Cardano.Slotting.Slot (EpochSize (..))
-import           Ouroboros.Consensus.Shelley.Node (emptyGenesisStaking)
-import           Ouroboros.Consensus.Shelley.Protocol (StandardShelley)
-import           Ouroboros.Consensus.Util.Time
+import           Cardano.API hiding (Hash, PaymentCredential, StakeCredential)
+import qualified Cardano.API as Api
+import           Cardano.Api.Shelley hiding (Hash, PaymentCredential, StakeCredential, Testnet)
 
-import           Shelley.Spec.Ledger.Address (Addr (..))
-import           Shelley.Spec.Ledger.BaseTypes (Network (..), truncateUnitInterval)
-import           Shelley.Spec.Ledger.Coin (Coin (..))
+import           Shelley.Spec.Ledger.BaseTypes (Network (..))
 import           Shelley.Spec.Ledger.Credential (Credential (..), PaymentCredential,
                      StakeCredential, StakeReference (..))
-import           Shelley.Spec.Ledger.Keys (GenDelegPair (..), Hash, KeyHash (..), KeyRole (..),
-                     VerKeyVRF)
-import           Shelley.Spec.Ledger.PParams (PParams' (..), emptyPParams)
-
-import           Cardano.Api.Shelley.Genesis
-
+import           Shelley.Spec.Ledger.Keys (Hash)
 
 exampleAll :: MultiSigScript
 exampleAll =
@@ -88,7 +78,7 @@ exampleMofN =
 
 convertToHash :: Text -> Api.Hash Api.PaymentKey
 convertToHash txt =
-  case Api.deserialiseFromRawBytesHex (Api.AsHash Api.AsPaymentKey) $ Text.encodeUtf8 txt of
+  case Api.deserialiseFromRawBytesHex (AsHash AsPaymentKey) $ Text.encodeUtf8 txt of
     Just payKeyHash -> payKeyHash
     Nothing -> error $ "Test.Cardano.Api.Examples.convertToHash: Error deserialising payment key hash: "
                      <> Text.unpack txt
